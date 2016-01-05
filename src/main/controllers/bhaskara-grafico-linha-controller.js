@@ -1,13 +1,14 @@
-myApp.controller('BhaskaraGraficoLinhaController', function BhaskaraGraficoLinhaController($scope,constantesFactory,bhaskaraService,graficoService) {
+define(['controllers/controllers','factories/constantes-factory','services/bhaskara-service','services/graficos-service'], function(controllers){
+	controllers.controller('equacaoGraficoLinhaController', ['$scope','padrao','bhaskaraService','graficoService', function($scope,padrao,bhaskaraService,graficoService){
 
-    $scope.valorA = constantesFactory.A;
-    $scope.valorB = constantesFactory.B;
-    $scope.valorC = constantesFactory.C;
+    $scope.valorA = padrao.A;
+    $scope.valorB = padrao.B;
+    $scope.valorC = padrao.C;
 
     var margem = {top: 0, right: 0, bottom: 0, left: 0};
     var svg = d3.select(document.getElementById('telaLinha')).append('svg')
-         .attr('width', constantesFactory.largura)
-         .attr('height', constantesFactory.altura)
+         .attr('width', padrao.largura)
+         .attr('height', padrao.altura)
          .append('g')
          .attr('transform', 'translate(' + margem.left + ',' + margem .top + ')');
 
@@ -17,20 +18,22 @@ myApp.controller('BhaskaraGraficoLinhaController', function BhaskaraGraficoLinha
       var ponto = 0;
       var anteriorX = 0;
       var anteriorY = 0;
-      graficoService.limpaQuadro(svg,0,0,constantesFactory.largura,constantesFactory.altura,constantesFactory.corDeTela,'gold');
-      escalaX = constantesFactory.largura / 2;
-      escalaY = constantesFactory.altura / 2;
+      graficoService.limpaQuadro(svg,0,0,padrao.largura,padrao.altura,padrao.corDeTela,'gold');
+      escalaX = padrao.largura / 2;
+      escalaY = padrao.altura / 2;
       for(var x=-escalaX; x<=escalaX;x++) {
             resultar = $scope.valorA * ( x * x ) + $scope.valorB * x + $scope.valorC;
             if ( ponto === 0 ){
-              graficoService.circuloCentral(svg,x,-resultar ,constantesFactory.raio,constantesFactory.corDeCirculo);
+              graficoService.circuloCentral(svg,x,-resultar ,padrao.raio,padrao.corDeCirculo);
               ponto = 1;
               }
             else{
-              graficoService.linhaCentral(svg,anteriorX,anteriorY,x,-resultar,constantesFactory.corDeCirculo );
+              graficoService.linhaCentral(svg,anteriorX,anteriorY,x,-resultar,padrao.corDeCirculo );
               }
             anteriorX = x;
             anteriorY = -resultar;
       }
     };
+
+}]);
 });

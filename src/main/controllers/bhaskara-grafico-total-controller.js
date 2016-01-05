@@ -1,35 +1,37 @@
-myApp.controller('BhaskaraGraficoTotalController', function BhaskaraGraficoTotalController($scope, constantesFactory, bhaskaraService, graficoService) {
+define(['controllers/controllers','factories/constantes-factory','services/bhaskara-service','services/graficos-service'], function(controllers){
+	controllers.controller('equacaoGraficoTotalController', ['$scope','padrao','bhaskaraService','graficoService', function($scope,padrao,bhaskaraService,graficoService){
 
-    $scope.inicioA = constantesFactory.inicioA;
-    $scope.inicioB = constantesFactory.inicioB;
-    $scope.inicioC = constantesFactory.inicioC;
+    $scope.inicioA = padrao.inicioA;
+    $scope.inicioB = padrao.inicioB;
+    $scope.inicioC = padrao.inicioC;
 
-    $scope.finalA = constantesFactory.finalA;
-    $scope.finalB = constantesFactory.finalB;
-    $scope.finalC = constantesFactory.finalC;
+    $scope.finalA = padrao.finalA;
+    $scope.finalB = padrao.finalB;
+    $scope.finalC = padrao.finalC;
 
     var margin = {top: 0, right: 0, bottom: 0, left: 0};
 
     var svg = d3.select(document.getElementById('telaTotal')).append('svg')
-         .attr('width', constantesFactory.largura)
-         .attr('height', constantesFactory.altura)
+         .attr('width', padrao.largura)
+         .attr('height', padrao.altura)
          .append('g')
          .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
     $scope.gerarGrafico = function () {
       var responder1 = [];
       var responder2 = [];
-      graficoService.limpaQuadro(svg,0,0,constantesFactory.largura,constantesFactory.altura,constantesFactory.corDeTela,'gold');
+      graficoService.limpaQuadro(svg,0,0,padrao.largura,padrao.altura,padrao.corDeTela,'gold');
       for(var passoA=$scope.inicioA; passoA<=$scope.finalA;passoA++) {
         for(var passoB=$scope.inicioB; passoB<=$scope.finalB;passoB++) {
           for(var passoC=$scope.inicioC; passoC<=$scope.finalC;passoC++) {
             if ( passoA !== 0) {
-              xx1 = bhaskaraService.calcularBhaskara( constantesFactory.numeroPositivo,passoA, passoB, passoC);
-              xx2 = bhaskaraService.calcularBhaskara( constantesFactory.numeroNegativo,passoA, passoB, passoC);
-              graficoService.circuloCentral(svg,xx1 * constantesFactory.escala,xx2 * constantesFactory.escala ,constantesFactory.raio,constantesFactory.corDeCirculo);
+              xx1 = bhaskaraService.calcularBhaskara( padrao.numeroPositivo,passoA, passoB, passoC);
+              xx2 = bhaskaraService.calcularBhaskara( padrao.numeroNegativo,passoA, passoB, passoC);
+              graficoService.circuloCentral(svg,xx1 * padrao.escala,xx2 * padrao.escala ,padrao.raio,padrao.corDeCirculo);
               }
           }
         }
       }
     };
+}]);
 });

@@ -48,8 +48,9 @@ No terminal, digitar em seguinte:
 
 2) Servidor de Local:
   2.1) npm install grunt-http-server
-  2.2) no navegador: http://0.0.0.0:8200
-  2.3) no terminal: grunt http-server
+  2.2) no terminal: grunt http-server
+  2.3) no navegador: http://0.0.0.0:8300
+
 
 3) incluir os dependencias no arquivo package.json na pasta de bhaskara por exemplo:
       {
@@ -67,13 +68,14 @@ No terminal, digitar em seguinte:
 6) Apos de incluir dos arquivos (package e gruntfile), deve digitar: npm install
 7) Para saber mais: http://gruntjs.com/
 
-Instalacao de karma
+Instalacao de karma com requireJS
 -------------------------------
 No terminal, digitar em seguinte:
 1) Instalacao de karma na pasta de Bhaskara:
   1.1) de karma: npm install karma --save-dev
   1.2) de Jasmine: npm install karma-jasmine --save-dev
   1.3) de Coverage: npm install karma karma-coverage --save-dev
+  1.4) de RequireJS: npm install requirejs --save
 
 2) Configuracao
   O arquivo karma.conf.js esta automaticamenteo de inicializacao de processo de karma.

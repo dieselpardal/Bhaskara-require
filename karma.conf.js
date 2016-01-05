@@ -3,16 +3,19 @@
 
 module.exports = function(config) {
   config.set({
-    basePath: '',
-    frameworks: ['jasmine'],
+
+    basePath: './',
+    frameworks: ['jasmine', 'requirejs'],
+    plugins: ['karma-phantomjs-launcher','karma-jasmine','karma-coverage','karma-requirejs'],
     files: [
       'node_modules/angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/angular-route/angular-route.min.js',
       'node_modules/angularjs-datepicker/dist/angular-datepicker.min.js',
       'node_modules/angular/d3.min.js',
-      'src/main/controllers/bhaskara-modular.js',
-      'src/main/**/*.js',
-      'src/test/unitario/**/*-spec.js'
+      {pattern: 'src/main/**/*.js', included: false},
+      {pattern: 'src/test/unitario/**/*-spec.js', included: false},
+      'src/test/test-main.js',
     ],
     exclude: [
     ],
@@ -20,7 +23,7 @@ module.exports = function(config) {
       'src/**/*.js': ['coverage']
 
     },
-    reporters: ['spec', 'coverage'],
+    reporters: ['progress', 'coverage'],
     coverageReporter: {
       type : 'html',
       dir : 'coverage/'

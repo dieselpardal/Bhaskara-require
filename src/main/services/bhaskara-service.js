@@ -1,33 +1,49 @@
-myApp.service('bhaskaraService', function (constantesFactory) {
+define(['services/services','services/calculo-bhaskara','factories/constantes-factory'], function(services,calculoBhaskara,padrao) {
+ services.service('bhaskaraService',['padrao','calculoBhaskara', function(padrao,calculoBhaskara) {
 
-  this.calcularBhaskara = function (sinal, a, b, c) {
-    return calcularBhaskaraCompleto(sinal, a, b, c);
-  };
+  function calcularBhaskara (sinal, a, b, c) {
+    return calculoBhaskara.calcularBhaskaraCompleto(sinal, a, b, c);
+  }
 
-  this.calcularDelta = function (a, b, c) {
-    return calcularDelta( a, b, c);
-  };
+  function calcularDelta(a, b, c) {
+    return calculoBhaskara.calcularDelta( a, b, c);
+  }
 
- this.operacaoPositivo = function (numero) {
+  function operacaoPositivo(numero) {
       if (numero >0 ){
         return '+' + numero;
       } else {
               return '' + numero;
           }
-  };
+  }
 
- this.operacaoSemUm = function (numero) {
+ function operacaoSemUm(numero) {
     switch(numero) {
        case  1: return '+';
        case  0: return '';
        case -1: return '-';
-      default: if (numero >1 ){
-                return '+' + numero;
-            }
+      default: {
+          if (numero >1 ){
+                    return '+' + numero;
+                    } else
+                    {
+                    return '' + numero;
+                    }
+                }
         }
-  };
+  }
 
-  this.isInvalido = function (numero) {
-          return (angular.isUndefined(numero) || numero === constantesFactory.anular ||  numero === null);
-  };
+  function isInvalido(numero) {
+          return (angular.isUndefined(numero) || numero === padrao.anular ||  numero === null);
+  }
+
+
+  return {
+          calcularBhaskara:calcularBhaskara,
+          calcularDelta: calcularDelta ,
+          operacaoPositivo: operacaoPositivo,
+          operacaoSemUm: operacaoSemUm,
+          isInvalido : isInvalido
+         };
+    }]);
 });

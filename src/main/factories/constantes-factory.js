@@ -1,9 +1,8 @@
-myApp.factory('constantesFactory', function() {
-  var largura = 800;
+define(['factories/factories'], function(factories){
+ var largura = 800;
   var altura = 600;
-
-    return {
-        A:  1,
+	factories.constant('padrao', {
+		A:  1,
         B:  5,
         C: -6,
         inicioA  :-5,
@@ -32,6 +31,6 @@ myApp.factory('constantesFactory', function() {
         corDeTela    : 'yellow',
         corDeCirculo : 'blue',
         corVermelho  : 'red',
-        corOuro      : 'gold',
-    };
+        corOuro      : 'gold'
+	});
 });

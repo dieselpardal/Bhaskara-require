@@ -20,9 +20,9 @@
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">10% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>20/20</span>
+        <span class='fraction'>2/20</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -30,18 +30,18 @@
         <span class='fraction'>0/0</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">14.29% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>7/7</span>
+        <span class='fraction'>1/7</span>
       </div>
       <div class='fl pad1y space-right2'>
-        <span class="strong">100% </span>
+        <span class="strong">10% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>20/20</span>
+        <span class='fraction'>2/20</span>
       </div>
     </div>
   </div>
-  <div class='status-line high'></div>
+  <div class='status-line low'></div>
 <pre><table class="coverage">
 <tr><td class="line-count quiet">1
 2
@@ -77,66 +77,66 @@
 32
 33</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">describe('Os servicos de Bhaskara.', function () {
   beforeEach(module('myApp'));
-   beforeEach(inject(function($injector) {
-     bhaskaraService = $injector.get('bhaskaraService');
+<span class="cstat-no" title="statement not covered" >   beforeEach(inject(<span class="fstat-no" title="function not covered" >function($injector) {</span></span>
+<span class="cstat-no" title="statement not covered" >     bhaskaraService = $injector.get('bhaskaraService');</span>
    }));
 &nbsp;
-    it('A equacao xˆ2+5x-6 = 0 deve ser x1 = 1 e x2 = -6.', function() {
-      expect(bhaskaraService.calcularBhaskara(1,1,5,-6)).toBe(1);
-      expect(bhaskaraService.calcularBhaskara(-1,1,5,-6)).toBe(-6);
+<span class="cstat-no" title="statement not covered" >    it('A equacao xˆ2+5x-6 = 0 deve ser x1 = 1 e x2 = -6.', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.calcularBhaskara(1,1,5,-6)).toBe(1);</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.calcularBhaskara(-1,1,5,-6)).toBe(-6);</span>
     });
 &nbsp;
-    it('A funcao de operacao Positivo de -1, 0 e 1 devem ser -1, 0 e +1 respectivamente.', function() {
-      expect(bhaskaraService.operacaoPositivo(-1)).toBe('-1');
-      expect(bhaskaraService.operacaoPositivo(0)).toBe('0');
-      expect(bhaskaraService.operacaoPositivo(1)).toBe('+1');
+<span class="cstat-no" title="statement not covered" >    it('A funcao de operacao Positivo de -1, 0 e 1 devem ser -1, 0 e +1 respectivamente.', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoPositivo(-1)).toBe('-1');</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoPositivo(0)).toBe('0');</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoPositivo(1)).toBe('+1');</span>
     });
 &nbsp;
-    it("A funcao de operacaoSemUm de -1, 0, 1 e 2 devem ser '-', '', '+' e '+2' respectivamente.", function() {
-      expect(bhaskaraService.operacaoSemUm(-1)).toBe('-');
-      expect(bhaskaraService.operacaoSemUm(0)).toBe('');
-      expect(bhaskaraService.operacaoSemUm(1)).toBe('+');
-      expect(bhaskaraService.operacaoSemUm(2)).toBe('+2');
+<span class="cstat-no" title="statement not covered" >    it("A funcao de operacaoSemUm de -1, 0, 1 e 2 devem ser '-', '', '+' e '+2' respectivamente.", <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoSemUm(-1)).toBe('-');</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoSemUm(0)).toBe('');</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoSemUm(1)).toBe('+');</span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.operacaoSemUm(2)).toBe('+2');</span>
     });
 &nbsp;
-    it('O numero de null nao deve validar.', function() {
-      expect(bhaskaraService.isInvalido(null)).toBe(true);
+<span class="cstat-no" title="statement not covered" >    it('O numero de null nao deve validar.', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.isInvalido(null)).toBe(true);</span>
     });
 &nbsp;
-    it('A funcao de DELTA  deve retornar sinal inexistente.', function() {
-      expect(bhaskaraService.calcularDelta(3,0,1)).toBe(-1);
+<span class="cstat-no" title="statement not covered" >    it('A funcao de DELTA  deve retornar sinal inexistente.', <span class="fstat-no" title="function not covered" >function() {</span></span>
+<span class="cstat-no" title="statement not covered" >      expect(bhaskaraService.calcularDelta(3,0,1)).toBe(-1);</span>
     });
 });
 &nbsp;</pre></td></tr>
@@ -145,7 +145,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 08 2015 10:57:14 GMT-0200 (BRST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 14 2015 15:57:35 GMT-0200 (BRST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

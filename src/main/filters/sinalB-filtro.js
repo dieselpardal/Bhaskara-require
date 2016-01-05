@@ -1,10 +1,15 @@
-myApp.filter('sinalB',
-  function(bhaskaraService) {
-    return function (numero) {
-      if(bhaskaraService.isInvalido(numero)) {
-        return '' ;
-      } else {
-              return bhaskaraService.operacaoSemUm(numero) + 'x';
-              }
-    };
-  });
+
+define(['filters/filters','services/bhaskara-service'], function(filters,bhaskaraService) {
+
+'use strict';
+ filters.filter('sinalB', function(bhaskaraService) {
+     return function (numero) {
+       if(bhaskaraService.isInvalido(numero)) {
+         return '' ;
+       } else {
+               return bhaskaraService.operacaoSemUm(numero) + 'x';
+               }
+     };
+   });
+
+ });

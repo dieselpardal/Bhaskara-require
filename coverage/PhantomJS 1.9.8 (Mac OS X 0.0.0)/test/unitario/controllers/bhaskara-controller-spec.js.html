@@ -22,7 +22,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>17/17</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>1/1</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>17/17</span>
+        <span class='fraction'>1/1</span>
       </div>
     </div>
   </div>
@@ -69,57 +69,90 @@
 24
 25
 26
-27</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-yes">2×</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
-<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">describe('Controlador de Bhaskara', function () {
-&nbsp;
-   var $rootScope, $scope, $controller;
-   beforeEach(module('myApp'));
-   beforeEach(inject(function($injector) {
-          $rootScope = $injector.get('$rootScope');
-          $scope = $rootScope.$new();
-          constantesFactory = $injector.get('constantesFactory');
-          $controller = $injector.get('$controller');
-          $controller('BhaskaraController', {
-                      $scope: $scope
-          });
-    }));
-&nbsp;
-  it('Verificar os variaveis de equação.',function() {
-    expect($scope.a).toBe(constantesFactory.A);
-    expect($scope.b).toBe(constantesFactory.B);
-    expect($scope.c).toBe(constantesFactory.C);
-  });
-&nbsp;
-  it('Verificar os resultados de equação.',function() {
-     $scope.resultarBhaskara();
-     expect($scope.x1).toBe(1);
-     expect($scope.x2).toBe(-6);
-  });
+//
+//requirejs(['../main/controllers/bhaskara-controller'], function(bhaskaraControlle) {
+//
+// it('Verificar os variaveis de equação.',function() {
+//     expect($scope.a).toBe(1);
+//     expect($scope.b).toBe(5);
+//     expect($scope.c).toBe(-6);
+//   });
+//
+//});
+//
+//
+////   var $rootScope, $scope, $controller;
+////   beforeEach(module('myApp'));
+////   beforeEach(inject(function($injector) {
+////          $rootScope = $injector.get('$rootScope');
+////          $scope = $rootScope.$new();
+////          constantesFactory = $injector.get('constantesFactory');
+////          $controller = $injector.get('$controller');
+////          $controller('BhaskaraController', {
+////                      $scope: $scope
+////          });
+////    }));
+////
+////  it('Verificar os variaveis de equação.',function() {
+////    expect($scope.a).toBe(constantesFactory.A);
+////    expect($scope.b).toBe(constantesFactory.B);
+////    expect($scope.c).toBe(constantesFactory.C);
+////  });
+////
+////  it('Verificar os resultados de equação.',function() {
+////     $scope.resultarBhaskara();
+////     expect($scope.x1).toBe(1);
+////     expect($scope.x2).toBe(-6);
+////  });
 });
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -127,7 +160,7 @@
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Tue Dec 08 2015 10:57:14 GMT-0200 (BRST)
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Dec 14 2015 15:57:35 GMT-0200 (BRST)
 </div>
 </div>
 <script src="../../../prettify.js"></script>

@@ -4,7 +4,6 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     jshint: {
       files: ['Gruntfile.js',
-              'src/main/controlles/**/*.js',
               'src/main/**/*.js',
               'src/test/unitario/**/*.js'],
       options: {
@@ -16,13 +15,13 @@ module.exports = function(grunt) {
         }
       }
     },
-    jasmine: {
+jasmine: {
         src: [
               'node_modules/angular/angular.js',
               'node_modules/angular-mocks/angular-mocks.js',
+              'node_modules/angular-route/angular-route.min.js',
               'node_modules/angularjs-datepicker/dist/angular-datepicker.min.js',
               'node_modules/angular/d3.min.js',
-              'src/main/controllers/bhaskara-modular.js',
               'src/main/**/*.js'],
       options: {
        specs: 'src/test/unitario/**/*-spec.js'
@@ -31,7 +30,7 @@ module.exports = function(grunt) {
     'http-server': {
       'root': {
         root: '',
-        port: 8200,
+        port: 8300,
         host: '0.0.0.0',
         https: false,
         openBrowser : false
