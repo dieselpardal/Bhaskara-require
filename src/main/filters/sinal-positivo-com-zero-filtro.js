@@ -1,5 +1,4 @@
 define(['filters/filters','services/bhaskara-service'], function(filters,bhaskaraService) {
-
   'use strict';
  filters.filter('sinalPositivoComZero', function(bhaskaraService) {
      return function (numero) {
@@ -7,8 +6,7 @@ define(['filters/filters','services/bhaskara-service'], function(filters,bhaskar
          return '' ;
        } else {
                return bhaskaraService.operacaoPositivo(numero);
-               }
-     };
+              }
+       };
    });
-
  });

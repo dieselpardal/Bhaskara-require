@@ -14,7 +14,7 @@ define(['services/services','services/calculo-bhaskara','factories/constantes-fa
         return '+' + numero;
       } else {
               return '' + numero;
-          }
+             }
   }
 
  function operacaoSemUm(numero) {
@@ -36,7 +36,6 @@ define(['services/services','services/calculo-bhaskara','factories/constantes-fa
   function isInvalido(numero) {
           return (angular.isUndefined(numero) || numero === padrao.anular ||  numero === null);
   }
-
 
   return {
           calcularBhaskara:calcularBhaskara,

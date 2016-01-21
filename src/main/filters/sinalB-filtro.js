@@ -1,6 +1,4 @@
-
 define(['filters/filters','services/bhaskara-service'], function(filters,bhaskaraService) {
-
 'use strict';
  filters.filter('sinalB', function(bhaskaraService) {
      return function (numero) {

@@ -93,8 +93,6 @@ function limpaQuadro(svg,x,y,l,a,cor) {
   grid:             grid,
   limpaQuadro:      limpaQuadro
 
-  };
-
+    };
   }]);
-
 });
